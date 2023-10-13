@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(lightyellow,rgb(226, 254, 255),rgb(255, 196, 205));
+}
+header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.437);
+    padding: 0 2%;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.653);
+    color: #ff0303;
+    text-transform: uppercase;
+    border-bottom: 1px solid lightyellow;
+    font-size: 80%;
+}
+.movie-body{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: scroll;
+    margin-top: 10px;
+}
+.n-w-h{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+.n-w-h h1{
+    width: 90%;
+    font-size: 100%;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+.thisweek{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+}
+.nextweek{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+}
+.movie{
+    min-width:8rem;
+    width:8rem;
+    height:97%;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    margin:0 10px;
+    justify-content: space-between;
+}
+.uc-movie {
+    min-width: 8rem;
+    width: 8rem;
+    height:97%;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 10px;
+}
+img{
+    width:100%;
+    height: 80%;
+    object-fit:fill;
+    border-radius: inherit;
+
+}
+.info{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
+    border-top-right-radius:0;
+    border-top-left-radius: 0;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-size: 60%;
+    margin: auto;
+    overflow: hidden;
+    font-weight: 300;
+    text-overflow:ellipsis;
+    text-transform: uppercase;
+    text-wrap:nowrap;
+}
+.CinemaList{
+    width: 100%;
+    height: 80%;
+    display: none;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    overflow: scroll;
+}
+.cinema{
+    width: 95%;
+    height: 9%;
+    box-shadow: 0px 0px 5px grey;
+    border-radius: 10px;
+    display: flex;
+    justify-content: Center;
+    align-items: center;
+    font-size: 80%;
+    margin:10px 0;
+
+}
+.RoomList{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.roomHead{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+    display: flex;
+    font-size: 70%;
+    color:black;
+    padding: 0 5px;
+    align-items: center;
+}
+.Room{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px grey;
+    border-radius: 10px;
+    width: calc(100% / 3 - 10px);
+    height: calc(100% / 3 - 10px);
+}
+.seatList{
+    width: 100%;
+    height: 80%;
+    overflow: scroll;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Time{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+.time{
+    width: calc(20% - 10px);
+    height: 70%;
+    box-shadow: 0px 0px 5px grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60%;
+    border-radius: 10px;
+}
+.Seats{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    overflow: scroll;
+    flex-wrap: wrap;
+}
+.seat{
+    width: calc(10%);
+    border: 0.5px solid black;
+    font-size: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1%;
+}
+.seat.selected{
+    user-select: none;
+    pointer-events: none;
+}
+.Couple{
+    width: 20%;
+    border: 0.5px solid black;
+}
+.Choose{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.Choose .price{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: scroll;
+    font-size: 100%;
+}
+.price i{
+    text-align: center;
+    width: 100%;
+    font-size: 50%;
+}
+.Choose p{
+    width: 50%;
+    font-size: 70%;
+    padding: 1%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button{
+    width:40%;
+    height: 50%;
+    border: none;
+    outline: none;
+    border: 1px solid black;
+    background-color: lightcyan;
+    border-radius: 10px;
+    font-size: 70%;
+}
+.reset{
+    background-color: lightcoral;
+}
+span{
+    font-size: 110%;
+}
+.ticket-body{
+    width: 100%;
+    height: 80%;
+    display: none;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 5px 0;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+.ticket{
+    width: calc(100% / 2 - 10px );
+    height: calc(100% / 2.5 );
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px;
+}
+.ticket p{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60%;
+    text-align: center;
+}
+@media (min-width: 568px) {
+    .movie {
+        width: 14em;
+        height:97%;
+    }
+    .uc-movie {
+        width: 14em;
+        height:97%;
+    }
+    .ticket {
+        width: calc(100% / 3 - 10px);
+        height: calc(100% / 2.5);
+    }
+}
+@media (min-width: 868px) {
+
+    .ticket {
+        width: calc(100% / 3 - 10px);
+        height: calc(100% / 2.5);
+    }
+        .Time {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    
+        .time {
+            width: calc(20% - 10px);
+            height: 80%;
+            box-shadow: 0px 0px 5px grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60%;
+            border-radius: 10px;
+        }
+}
+.proceed.disabled {
+    user-select: none;
+    pointer-events: none;
+}
